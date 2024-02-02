@@ -1,4 +1,5 @@
 /*
+타입 별칭은 새로운 타입을 만드는 것이 아니라, 이미 존재하는 타입을 쉽게 참조할 수 있도록 이름을 붙이는 것입니다. 
 타입 별칭을 이용하면 다음과 같이 변수를 선언하듯 타입을 별도로 정의할 수 있습니다.
  */
 {
@@ -43,4 +44,9 @@
     function test() {
         type User = string;
     }
+}
+{
+    type StringOrNumber = string | number; // 유니언 타입
+    type MyTuple = [number, string]; // 튜플
+    type JSONObject = { [key: string]: string }; // 객체
 }
