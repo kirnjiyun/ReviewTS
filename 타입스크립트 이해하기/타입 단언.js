@@ -43,3 +43,10 @@
     var len = post.author.length;
     console.log(typeof len);
 }
+{
+    var value = 20;
+    function giveme20(value) {
+        return value;
+    }
+    console.log(giveme20(value));
+}

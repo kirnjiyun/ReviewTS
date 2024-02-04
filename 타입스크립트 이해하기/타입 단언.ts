@@ -67,3 +67,12 @@
     const len: number = post.author!.length;
     console.log(typeof len);
 }
+{
+    const value = 20;
+    // let value: 20 = 20;
+    // let value = 20 as const;
+    function giveme20(value: 10 | 20) {
+        return value;
+    }
+    console.log(giveme20(value));
+}
