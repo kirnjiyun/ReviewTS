@@ -56,8 +56,4 @@
         premiere: 1997,
         happyEnding: false,
     };
-
-    let anotherRomanceMovie2: Movie = romanceMovie;
-    console.log(anotherRomanceMovie2);
-    anotherRomanceMovie2: Video = movie;
 }
