@@ -21,7 +21,7 @@
 }
 {
     //instanceof를 이용하면 내장 클래스 타입을 보장할 수 있는 타입가드를 만들 수 있습니다.
-    function func(value: number | string | Date | null) {
+    function func100(value: number | string | Date | null) {
         if (typeof value === "number") {
             console.log(value.toFixed());
         } else if (typeof value === "string") {
@@ -32,7 +32,7 @@
     }
 }
 {
-    function func(value: number | string | Date | null | Person) {
+    function func123(value: number | string | Date | null | Person) {
         if (typeof value === "number") {
             console.log(value.toFixed());
         } else if (typeof value === "string") {
@@ -53,5 +53,5 @@
         name: "유닝",
         age: 1564,
     };
-    func(person);
+    func123(person);
 }

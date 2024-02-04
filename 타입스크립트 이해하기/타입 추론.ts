@@ -37,7 +37,7 @@
 
     let [one, two, three] = [1, "hello", true];
 
-    function func() {
+    function func3() {
         return "hello";
     }
     // 반환값이 string 타입으로 추론된다
@@ -48,12 +48,13 @@
 
     let d;
     // 암시적인 any 타입으로 추론
-    d = 10;
-    d.toFixed();
+    // d = 10;
+    // d.toFixed();
 
     d = "hello";
     d.toUpperCase();
-    d.toFixed(); // 오류...띠용 안나는디?
+    d.toFixed();
+    console.log(d); // 오류...띠용 안나는디?
 
     const num = 10;
     // 10 Number Literal 타입으로 추론
