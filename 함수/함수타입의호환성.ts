@@ -14,6 +14,7 @@
     a = b; // ✅
 }
 {
+    //매개변수 개수 같을때
     type C = (value: number) => void;
     type D = (value: 10) => void;
 
@@ -22,4 +23,34 @@
 
     d = c;
     // 이는 반환값 타입과 반대됩니다. 마치 다운캐스팅을 허용하는 것 같아 보입니다.
+    type Animal = {
+        name: string;
+    };
+
+    type Dog = {
+        name: string;
+        color: string;
+    };
+
+    let animalFunc = (animal: Animal) => {
+        console.log(animal.name);
+    };
+
+    let dogFunc = (dog: Dog) => {
+        console.log(dog.name);
+        console.log(dog.color);
+    };
+
+    animalFunc = dogFunc; // ❌
+    dogFunc = animalFunc; // ✅
+}
+{
+    //매개변수 개수 다를때
+    type Func1 = (a: number, b: number) => void;
+    type Func2 = (a: number) => void;
+
+    let func1: Func1 = (a, b) => {};
+    let func2: Func2 = (a) => {};
+
+    func1 = func2; // ✅
 }
