@@ -13,5 +13,18 @@
     var c = function (value) { };
     var d = function (value) { };
     d = c;
-    // 이는 반환값 타입과 반대됩니다. 마치 다운캐스팅을 허용하는 것 같아 보입니다.
+    var animalFunc = function (animal) {
+        console.log(animal.name);
+    };
+    var dogFunc = function (dog) {
+        console.log(dog.name);
+        console.log(dog.color);
+    };
+    animalFunc = dogFunc; // ❌
+    dogFunc = animalFunc; // ✅
+}
+{
+    var func1 = function (a, b) { };
+    var func2_1 = function (a) { };
+    func1 = func2_1; // ✅
 }
