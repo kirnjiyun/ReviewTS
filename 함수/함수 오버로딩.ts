@@ -22,6 +22,9 @@
     console.log(add1(1, 2));
     console.log(add1("14", "00"));
     console.log(add1("Hello", "World"));
+    // console.log(add1(1));
+    // console.log(add1(1, 2, 3));
+    // console.log(add1(true, false));
 }
 //오버로드 시그니처
 function greet(name: string): string;
@@ -38,3 +41,4 @@ function greet(name: string, age?: number): string {
 
 console.log(greet("김지윤")); // "안녕하세요, 제 이름은 김지윤입니다."
 console.log(greet("김지윤", 3)); // "안녕하세요, 제 이름은 김지윤이고, 나이는 3살입니다."
+// console.log(greet());
