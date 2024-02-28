@@ -28,3 +28,50 @@ function printAuthorInfo(author: Post["author"]) {
     console.log(`${author.id} - ${author.name}`);
 }
 console.log(printAuthorInfo(post.author));
+
+interface Animal {
+    name: string;
+    species: string;
+    description: {
+        color: string[];
+        diet: string;
+        weight: number;
+    };
+}
+
+let animal: Animal = {
+    name: "푸바오",
+    species: "판다",
+    description: {
+        color: ["검정색", "흰색"],
+        diet: "채식",
+        weight: 110,
+    },
+};
+function introduceAnimal(description: Animal["description"]) {
+    console.log(
+        `${description.diet}이며, 몸무게는 ${description.weight}kg입니다.`
+    );
+}
+console.log(introduceAnimal(animal.description));
+interface Animal2 {
+    name: string;
+    species: string;
+    description: {
+        color: string[];
+        diet: string;
+        weight: number;
+        siblings: string[];
+    };
+}
+
+let animal2: Animal2 = {
+    name: "푸바오",
+    species: "판다",
+    description: {
+        color: ["검정색", "흰색"],
+        diet: "채식",
+        weight: 110,
+        siblings: ["후이바오", "루이바오"],
+    },
+};
