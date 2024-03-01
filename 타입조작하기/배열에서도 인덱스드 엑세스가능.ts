@@ -32,3 +32,39 @@ const secondpost: PostList[0] = {
 function printAuthorInfo2(author: PostList[number]["author"]) {
     console.log(`${author.id} - ${author.name}`);
 }
+
+type MovieList = {
+    title: string;
+    genre: string;
+    premiere: number;
+    information: {
+        cast: string[];
+        ott: boolean;
+        cinema: boolean;
+    };
+}[];
+const firstmovie: MovieList[number] = {
+    title: "웡카",
+    genre: "판타지",
+    premiere: 20240131,
+    information: {
+        cast: ["티모시 샬라메", "휴 그랜트", "칼라 레인"],
+        ott: false,
+        cinema: true,
+    },
+};
+const secondmovie: MovieList[0] = {
+    title: "듄2",
+    genre: "액션",
+    premiere: 20240228,
+    information: {
+        cast: ["티모시 샬라메", "젠데이아 콜먼", "레베카 퍼거슨"],
+        ott: false,
+        cinema: true,
+    },
+};
+function printCastInfo(information: MovieList[number]["information"]) {
+    console.log(`이 영화에는 ${information.cast}이 출연합니다.`);
+}
+printCastInfo(firstmovie.information);
+printCastInfo(secondmovie.information);
