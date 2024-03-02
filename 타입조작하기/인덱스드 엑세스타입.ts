@@ -53,7 +53,23 @@ function introduceAnimal(description: Animal["description"]) {
         `${description.diet}이며, 몸무게는 ${description.weight}kg입니다.`
     );
 }
-console.log(introduceAnimal(animal.description));
+function introduceAnimal1(description: {
+    color: string[];
+    diet: string;
+    weight: number;
+}) {
+    console.log(
+        `${description.diet}이며, 몸무게는 ${description.weight}kg입니다.`
+    );
+}
+// const desciptionKey = "description";
+// function introduceAnimal(description: Animal[descriptionkey]) {
+//     console.log(
+//         `${description.diet}이며, 몸무게는 ${description.weight}kg입니다.`
+//     );
+// }
+introduceAnimal(animal.description);
+introduceAnimal1(animal.description);
 interface Animal2 {
     name: string;
     species: string;
@@ -75,3 +91,8 @@ let animal2: Animal2 = {
         siblings: ["후이바오", "루이바오"],
     },
 };
+function printAnimalColor(color: Animal2["description"]["color"]) {
+    console.log(`이 동물은 ${color}입니다.`);
+}
+
+printAnimalColor(animal.description.color);

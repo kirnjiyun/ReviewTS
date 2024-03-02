@@ -1,1 +1,1 @@
-console.log(printAuthorInfo(post.author));
+printCastInfo(firstmovie.information);
