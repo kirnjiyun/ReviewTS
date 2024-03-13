@@ -31,6 +31,7 @@ export default function TodoList({ todoList, setTodoList }: TodoListProps) {
                             </Content>
                             <DeleteTodo
                                 id={todo.id}
+                                done={todo.done} // 추가
                                 setTodoList={setTodoList}
                             />
                         </Item>

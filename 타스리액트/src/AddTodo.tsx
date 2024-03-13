@@ -49,7 +49,6 @@ const AddTodo: React.FC<AddTodoProps> = ({
 export default AddTodo;
 
 const Wrapper = styled.div`
-    /* position: fixed; */
     display: flex;
     align-items: center;
     gap: 5px;

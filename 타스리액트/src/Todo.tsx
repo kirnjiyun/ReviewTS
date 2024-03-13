@@ -19,7 +19,7 @@ export default function Todo() {
 
     return (
         <Container>
-            <Wrapper>
+            <div>
                 <Title>My Todolist</Title>
                 <AddTodo
                     todoList={todoList}
@@ -28,12 +28,10 @@ export default function Todo() {
                     setIdCount={setIdCount}
                 />
                 <TodoList todoList={todoList} setTodoList={setTodoList} />
-            </Wrapper>
+            </div>
         </Container>
     );
 }
-
-const Wrapper = styled.div``;
 
 const Container = styled.main`
     display: flex;
