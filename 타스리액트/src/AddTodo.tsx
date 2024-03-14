@@ -38,7 +38,7 @@ const AddTodo: React.FC<AddTodoProps> = ({
             <Button
                 disabled={!inputValue}
                 inputValue={inputValue}
-                onClick={onAddTodo}
+                onClick={() => onAddTodo()}
             >
                 추가
             </Button>

@@ -40,7 +40,6 @@ const Container = styled.main`
     justify-content: center;
     min-width: 100vw;
     min-height: 100vh;
-
     background-color: #f6f7f9;
 `;
 
